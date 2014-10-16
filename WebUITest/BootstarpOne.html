@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <label class="page-header">表格演示:获得焦点样式.隔行样式.边框.表格收缩 .行或者单元格独立样式.响应式表格.</label>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Username</th>
+                        <th>Username</th>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td class="success">@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>@fat</td>
+                    <td class="active">@fat</td>
+                    <td>@fat</td>
+                </tr>
+                <tr class="warning">
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>The Bird</td>
+                    <td>@twitter</td>
+                    <td class="danger">@fat</td>
+                    <td>@fat</td>
+                    <td>@fat</td>
+                </tr>
+            </table>
+        </div>
+        <label class="page-header">表单演示:role属性表示告诉辅助设备此标记的含义.表单控件分组.表单控件100%长度显示.</label>
+        <form action="/" role="form" method="post">
+            <div class="form-group">
+                <label for="EmailAddress">Email address</label>
+                <input type="email" class="form-control" id="EmailAddress" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+                <label for="FormPassword">Password</label>
+                <input type="password" class="form-control" id="FormPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="FormFile">File input</label>
+                <input type="file" id="FormFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" />Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success"> Submit</button>
+        </form>
+    </div>
+</body>
+</html>
