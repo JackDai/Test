@@ -53,26 +53,83 @@
             </table>
         </div>
         <label class="page-header">表单演示:role属性表示告诉辅助设备此标记的含义.表单控件分组.表单控件100%长度显示.</label>
-        <form action="/" role="form" method="post">
+        <form class="form-horizontal" role="form">
             <div class="form-group">
-                <label for="EmailAddress">Email address</label>
-                <input type="email" class="form-control" id="EmailAddress" placeholder="Enter email" />
-            </div>
-            <div class="form-group">
-                <label for="FormPassword">Password</label>
-                <input type="password" class="form-control" id="FormPassword" placeholder="Password">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
             </div>
             <div class="form-group">
-                <label for="FormFile">File input</label>
-                <input type="file" id="FormFile">
-                <p class="help-block">Example block-level help text here.</p>
+                <label class="col-sm-2 control-label" for="disabledInput">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="disabledInput" placeholder="Disabled input here..." />
+                </div>
             </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" />Check me out
-                </label>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
             </div>
-            <button type="submit" class="btn btn-success"> Submit</button>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="FromSelect">Select</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="FromSelect">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="FromSelect1">Select1</label>
+                <div class="col-sm-10">
+                    <select class="form-control" multiple id="FromSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <textarea rows="3" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+        <label class="page-header">将 .disabled 类赋予 .radio、.radio-inline、.checkbox、.checkbox-inline 或 fieldset。</label>
+        <form role="form">
+            <fieldset>
+                <div class="form-group">
+                    <label for="disabledTextInput">Disabled input</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" readonly>
+                </div>
+                <div class="form-group has-error">
+                    <label for="disabledSelect">Disabled select menu</label>
+                    <select id="disabledSelect" class="form-control">
+                        <option>Disabled select</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Can't check this
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
         </form>
     </div>
 </body>
