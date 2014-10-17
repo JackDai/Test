@@ -350,7 +350,6 @@ JSZip.prototype = (function () {
       return object;
    };
 
-
    /**
     * Find the parent folder of the path.
     * @private
@@ -460,7 +459,6 @@ JSZip.prototype = (function () {
       dosDate = dosDate << 5;
       dosDate = dosDate | o.date.getDate();
 
-
       var header = "";
 
       // version needed to extract
@@ -485,7 +483,6 @@ JSZip.prototype = (function () {
       // extra field length
       header += "\x00\x00";
 
-
       var fileRecord = JSZip.signature.LOCAL_FILE_HEADER + header + utfEncodedFileName;
 
       var dirRecord = JSZip.signature.CENTRAL_FILE_HEADER +
@@ -505,7 +502,6 @@ JSZip.prototype = (function () {
       decToHex(offset, 4) +
       // file name
       utfEncodedFileName;
-
 
       return {
          fileRecord : fileRecord,
@@ -713,7 +709,6 @@ JSZip.prototype = (function () {
 
          var zipData = [], localDirLength = 0, centralDirLength = 0, writer, i;
 
-
          // first, generate all the zip parts.
          for (var name in this.files) {
             if ( !this.files.hasOwnProperty(name) ) { continue; }
@@ -752,7 +747,6 @@ JSZip.prototype = (function () {
          // .ZIP file comment length
          "\x00\x00";
 
-
          // we have all the parts (and the total length)
          // time to create a writer !
          switch(options.type.toLowerCase()) {
@@ -780,8 +774,6 @@ JSZip.prototype = (function () {
          writer.append(dirEnd);
 
          var zip = writer.finalize();
-
-
 
          switch(options.type.toLowerCase()) {
             // case "zip is an Uint8Array"
@@ -907,7 +899,6 @@ JSZip.prototype = (function () {
          return newObj;
       },
 
-
       /**
        * http://www.webtoolkit.info/javascript-utf8.html
        */
@@ -928,7 +919,6 @@ JSZip.prototype = (function () {
          var result = [], resIndex = 0;
 
          for (var n = 0; n < string.length; n++) {
-
             var c = string.charCodeAt(n);
 
             if (c < 128) {
@@ -941,7 +931,6 @@ JSZip.prototype = (function () {
                result[resIndex++] = String.fromCharCode(((c >> 6) & 63) | 128);
                result[resIndex++] = String.fromCharCode((c & 63) | 128);
             }
-
          }
 
          return result.join("");
@@ -969,7 +958,6 @@ JSZip.prototype = (function () {
          }
 
          while ( i < input.length ) {
-
             c = isArray ? input[i] : input.charCodeAt(i);
 
             if (c < 128) {
@@ -985,7 +973,6 @@ JSZip.prototype = (function () {
                result[resIndex++] = String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
                i += 3;
             }
-
          }
 
          return result.join("");
@@ -1351,8 +1338,6 @@ JSZip.compressions = {
          throw new Error(type + " is not supported by this browser");
       }
    };
-
-
 })();
 
 (function (){
@@ -1408,7 +1393,6 @@ JSZip.base64 = (function() {
          var i = 0;
 
          while (i < input.length) {
-
             chr1 = input.charCodeAt(i++);
             chr2 = input.charCodeAt(i++);
             chr3 = input.charCodeAt(i++);
@@ -1427,7 +1411,6 @@ JSZip.base64 = (function() {
             output = output +
                _keyStr.charAt(enc1) + _keyStr.charAt(enc2) +
                _keyStr.charAt(enc3) + _keyStr.charAt(enc4);
-
          }
 
          return output;
@@ -1443,7 +1426,6 @@ JSZip.base64 = (function() {
          input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
 
          while (i < input.length) {
-
             enc1 = _keyStr.indexOf(input.charAt(i++));
             enc2 = _keyStr.indexOf(input.charAt(i++));
             enc3 = _keyStr.indexOf(input.charAt(i++));
@@ -1461,11 +1443,9 @@ JSZip.base64 = (function() {
             if (enc4 != 64) {
                output = output + String.fromCharCode(chr3);
             }
-
          }
 
          return output;
-
       }
    };
 }());
