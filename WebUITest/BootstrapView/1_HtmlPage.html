@@ -8,7 +8,43 @@
 <body>
     <div class="container">
         <label class="page-header">按钮</label>
-
+        <div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <button class="btn btn-danger  btn-sm">按钮一</button>
+                    <button class="btn btn-success btn-lg" disabled>按钮二</button>
+                    <input type="button" class="btn btn-link disabled" value="俺是One" />
+                    <button class="btn btn-info disabled " role="button" id="BtnTwo" onclick="myfunctionOne()">俺是Two</button>
+                    <button class="btn btn-primary btn-xs">俺是Three</button>
+                    <script>
+                        function myfunctionOne() {
+                            alert("Hello World!");
+                        };
+                    </script>
+                    <a class="btn btn-default" href="#">我是A标签</a>
+                    <a class="btn btn-default disabled" href="#">我是被禁用的A标签</a>
+                </div>
+                <div class="col-lg-4">
+                    <button class="btn btn-success btn-block">我是块一</button>
+                    <button class="btn btn-warning btn-block">我是块一</button>
+                </div>
+            </div>
+        </div>
+        <label class="page-header">图片</label>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="../Images/SVGOne.svg" class="img-responsive img-rounded" />
+            </div>
+            <div class="col-lg-3">
+                <img src="../Images/GirlTwo.jpg" class="img-responsive img-rounded" />
+            </div>
+            <div class="col-lg-3">
+                <img src="../Images/Mountain.jpg" class="img-responsive img-circle" />
+            </div>
+            <div class="col-lg-3">
+                <img src="../Images/GrilOne.jpg" class="img-responsive img-thumbnail" />
+            </div>
+        </div>
     </div>
 </body>
 </html>
