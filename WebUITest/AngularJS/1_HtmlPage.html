@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TestAngularJS</title>
+    <script src="JS/angular.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr />
+                <label>Name:</label>
+                <input type="text" ng-model="yourName" class="form-control" placeholder="Enter a name here" />
+                <h3>Hello {{yourName || 'World'}};</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul>
+                    <li>
+                        <span>Nexus S</span>
+                        <p>
+                            Fast just got faster with Nexus S.
+                        </p>
+                    </li>
+                    <li>
+                        <span>Motorola XOOM™ with Wi-Fi</span>
+                        <p>
+                            The Next, Next Generation tablet.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
