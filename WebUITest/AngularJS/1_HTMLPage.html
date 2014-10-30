@@ -1,21 +1,35 @@
 ﻿<!doctype html>
 <html ng-app>
 <head>
-    <script src="http://code.angularjs.org/angular-1.1.0.min.js"></script>
-    <script src="script.js"></script>
+    <!--<script src="//www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>-->
+    <script src="../Scripts/angular-1.26.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="Js/script.js"></script>
     <title>Test</title>
 </head>
 <body>
-    <div ng-controller="InvoiceCntl">
-        <table>
-            <tr><td>Quantity</td><td>Cost</td></tr>
-            <tr>
-                <td><input type="integer" min="0" ng-model="qty" required></td>
-                <td><input type="number" ng-model="cost" required></td>
-            </tr>
-        </table>
-        <hr>
-        <b>Total:</b> {{qty * cost | currency}}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Name:</label>
+                <input type="text" class="form-control" ng-model="name" />
+                <p ng-bind="name"></p>
+            </div>
+            <div class="col-lg-4">
+                <div data-ng-init="FristName='Jack'"></div>
+                <p>Name: <span data-ng-bind="FristName"></span></p>
+            </div>
+            <div class="col-lg-4">
+                <label>Name:</label>
+                <p>表达式:{{5+5}}</p>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-4">
+                <label ng-init="quantity=2;cost=5">Total:{{quantity*cost}}</label>
+            </div>
+        </div>
     </div>
 </body>
 </html>
